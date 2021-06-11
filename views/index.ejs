@@ -1,0 +1,58 @@
+<%- include("./partials/header") %>
+
+<div class="container1 m-3">
+    <center><h1 class="mb-3">Fill In The Employee Fields</h1></center>
+    <form action="/index" method="POST" class="row g-3" enctype="multipart/form-data">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" name="fname" class="form-control" id="validationCustom01" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" name="lname" class="form-control" id="validationCustom02">
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Contact Number</label>
+            <input type="text" name="cno" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Job Title</label>
+          <input type="text" name="des" class="form-control" id="validationCustom03" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Sex</label>
+          <select class="form-select" name="sex" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Date of Birth</label>
+          <input type="date" name="dob" class="form-control" id="validationCustom05" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="exampleFormControlTextarea1">Address</label>
+          <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="exampleFormControlTextarea1">Job Description</label>
+          <textarea class="form-control" name="job" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Email Address</label>
+          <input type="email" name="email" class="form-control" id="validationCustom03" required>
+        </div>
+        <div class="col-md-2">
+          <label for="validationCustom03" class="form-label">Upload Identity Proof</label>
+          <input type="file" id="image" name="image" class="py-1">
+        </div>       
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Add Employee to The Database</button>
+        </div>
+    </form>
+    <a href="table"><button class="btn btn-warning mt-3" type="submit">See All Employees</button></a>
+</div>
+
+<%- include("./partials/footer") %>

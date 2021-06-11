@@ -1,0 +1,43 @@
+<%- include("./partials/header") %>
+
+<div class="container2 m-4">
+  <center><h1 class="mb-5">LIST OF ALL EMPLOYEES</h1></center>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">D.O.B</th>
+            <th scope="col">Sex</th>
+            <th scope="col">More Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% employees.forEach(employee =>{ %>
+          <tr>
+            <th scope="row"><%= employee._id %></th>
+            <td><%= employee.fname %></td>
+            <td><%= employee.lname %></td>
+            <td><%= employee.email%></td>
+            <td><%= employee.cno %></td>
+            <td><%= employee.dob %></td>
+            <td><%= employee.sex %></td>
+            <td>
+              <a href="/employee/<%= employee._id %>" class="btn-warning">View
+                <i class="fa fa-fw fa-eye"></i>
+              </a><br>
+              <a href="/delete/<%= employee._id %>" class="btn-danger">Delete
+                <i class="fas fa-user-minus"></i>
+              </a>
+            </td>
+          </tr>
+          <%})%>
+        </tbody>
+    </table>
+    <a href="/"><button class="btn btn-primary mt-3" type="submit">Go Back To Add More Employees</button></a>
+</div>
+
+<%- include("./partials/footer") %>
